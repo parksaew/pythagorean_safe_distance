@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Pythagoras' Safe Distance</title>
+        <script defer src="index.js" charset="utf-8"></script>
+    </head> 
+
+    <body>
+
+        <div id="introduction">
+            <h3>So we've all heard that we need to stay 2 meters apart to be safe from people's germs...</h3>
+            <br>
+            <p>...however, remember that we don't live in a flat world! We live in a 3-D world with altitudes and inclines).
+                Therefore, actual distance between your facial orifices and others' facial orifices does not necessarily equal the
+                horizontal distance between you and the other person unless you are both the same height. Then how far should we step
+                away from others to keep a safe distance efficiently? Lucky for us we have our good ol' friend pythagoras to help us!
+            </p>
+            <br>
+            <h3>Find out how far you should actually step away from the other person!</h2>
+            <br>
+        </div>      
+
+        <form>
+            <label for="own-height">Your Height (cm):</label><br>
+            <input type="number" id="own-height" name="own-height"><br>
+            <label for="other-height">The Other Person's Height (cm):</label><br>
+            <input type="number" id="other-height" name="other-height"><br>
+        </form>
+        <br>
+
+        <div id="calculation">
+            <!--Calculation here-->
+        </div>
+
+        <br>
+
+        <div id="visualization" width="" height="">
+            <canvas id="triangle" width="0" height="0">
+                <!--Triangle drawing here-->
+            </canvas>
+            <!--style doesn't seem to do anything-->
+            <!--<img id="user-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" style="left:80px;"/>
+            <img id="other-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" />-->
+        </div>
+
+
+    </body>
+</html>
