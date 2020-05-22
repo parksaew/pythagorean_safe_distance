@@ -1,4 +1,4 @@
-
+ 
 let calcDiv = document.getElementById('calculation')
 let myHeightInput = document.getElementById('own-height')
 let otherHeightInput = document.getElementById('other-height')
