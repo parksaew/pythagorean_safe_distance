@@ -5,44 +5,119 @@
         <meta charset="utf-8">
         <title>Pythagoras' Safe Distance</title>
         <script defer src="index.js" charset="utf-8"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-color: #2a363b;
+                font-family: 'Roboto', sans-serif;
+                margin: 0px;
+            }
+
+            .header {
+                padding: 10px;
+                text-align: center;
+                background: #e84a5f;
+                color: #2a363b;
+                font-size: 16px;
+                overflow: auto;
+            }
+
+            h1 {
+                
+            }
+
+            h2 {
+                color: #ff847c; 
+                margin: 0em 10em 2em 10em;
+                text-align: center;
+            }
+
+            p {
+                color: #fecea8;
+                margin: 5em 10em 3em 10em;
+                text-align: left;
+            }
+
+            label {
+                font-size: medium;
+            }
+
+            #app-area {
+                border: 1px solid #e84a5f;
+                margin: 0em 10em 5em 10em;
+                padding: 3em;
+            }
+
+            #two-col-form {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            #left-col {
+                float: left;
+                color: #ff847c;
+            }
+
+            #right-col {
+                float: right;
+                color: #ff847c;
+            }
+
+            #visualization {
+                width: 50em;
+                margin: auto;
+                overflow: hidden;
+            }
+
+        </style>
     </head> 
 
     <body>
 
-        <div id="introduction">
-            <h3>So we've all heard that we need to stay 2 meters apart to be safe from people's germs...</h3>
-            <br>
-            <p>...however, remember that we don't live in a flat world! We live in a 3-D world with altitudes and inclines).
-                Therefore, actual distance between your facial orifices and others' facial orifices does not necessarily equal the
-                horizontal distance between you and the other person unless you are both the same height. Then how far should we step
-                away from others to keep a safe distance efficiently? Lucky for us we have our good ol' friend pythagoras to help us!
-            </p>
-            <br>
-            <h3>Find out how far you should actually step away from the other person!</h2>
-            <br>
-        </div>      
-
-        <form>
-            <label for="own-height">Your Height (cm):</label><br>
-            <input type="number" id="own-height" name="own-height"><br>
-            <label for="other-height">The Other Person's Height (cm):</label><br>
-            <input type="number" id="other-height" name="other-height"><br>
-        </form>
-        <br>
-
-        <div id="calculation">
-            <!--Calculation here-->
+        <div class="header">
+            <h1>The Pythagorean Safe Distance</h1>
         </div>
 
-        <br>
+        <div id="introduction">
 
-        <div id="visualization" width="" height="">
-            <canvas id="triangle" width="0" height="0">
-                <!--Triangle drawing here-->
-            </canvas>
-            <!--style doesn't seem to do anything-->
-            <!--<img id="user-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" style="left:80px;"/>
-            <img id="other-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" />-->
+            <p>Those nasty COVID-19 germs can spread from a person’s mouth/nose to another person’s face. So when you are with someone, the distance from 
+                your face to the other person’s face is the hypotenuse of the triangle that is as tall as the difference between your heights. 
+                <br>
+                <br>
+                Then what is the actual horizontal distance you should step away from each other?
+            </p>
+            <br>
+            <h2>Enter your heights below to find out!</h2>
+            <br>
+        </div>
+        
+        <div id="app-area">
+            <div id="two-col-form">
+                <div id="left-col">
+                    <label for="own-height">Your Height (cm):</label>
+                    <input type="number" id="own-height" name="own-height">
+                </div>
+                <div id="right-col">
+                    <label for="other-height">Their Height (cm):</label>
+                    <input type="number" id="other-height" name="other-height">
+                </div>
+            </div>
+
+
+            <div id="visualization" width="" height="">
+                <canvas id="triangle" width="0" height="0">
+                    <!--Triangle drawing here-->
+                </canvas>
+                <!--style doesn't seem to do anything-->
+                <img id="user-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" style="left:80px;"/>
+                <img id="other-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" />
+                <br>
+                <div id="calculation">
+                    <!--Calculation here-->
+                </div>    
+                <br>
+            </div>
         </div>
 
 

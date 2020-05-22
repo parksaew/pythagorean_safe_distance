@@ -40,30 +40,23 @@ function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherIm
         var context = canvas.getContext('2d');
         var startX = 30
         var startY = yHeight + 5
+        context.strokeStyle = '#e84a5f'
+        context.lineWidth = 3
+        context.font = "13px Roboto"
+        context.fillStyle = "#ff847c"
 
-
-        if (leftShorter == 1){
-            // Reset the current path
-            context.beginPath(); 
-
-            // Starting point
-            context.moveTo(startX, startY);
-
-            // End point - hypotenuse (remember that positive y value goes downwards)
-            context.lineTo(startX + xWidth , startY - yHeight);
-
-            // End point - vertical line
-            context.lineTo(startX + xWidth, startY)
-
-            // End point - horizontal line
-            context.lineTo(startX, startY);
-
-            // Make the line visible
-            context.stroke();
+        if (leftShorter == 1){            
+            context.beginPath(); // Reset the current path            
+            context.moveTo(startX, startY); // Starting point          
+            context.lineTo(startX + xWidth , startY - yHeight); // End point - hypotenuse (remember that positive y value goes downwards)            
+            context.lineTo(startX + xWidth, startY) // End point - vertical line            
+            context.lineTo(startX, startY); // End point - horizontal line
+            
+            context.stroke(); // Make the line visible
             
             // Put the dimensions as text
-            context.fillText(`y = ${yHeight}cm`, startX + xWidth + 5, startY/2);
-            context.fillText(`x = ${xWidth}cm`, (startX + xWidth)/2, startY + 15);
+            context.fillText(`${yHeight}cm`, startX + xWidth + 5, startY/2);
+            context.fillText(`${xWidth}cm`, (startX + xWidth)/2, startY + 15);
             //context.rotate(-angle * Math.PI / 180); //I could calculate the angle but not important
             context.fillText(`200cm`, (startX + xWidth)/3.5, startY/2);
 
@@ -76,8 +69,8 @@ function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherIm
             context.lineTo(startX, startY)
             context.lineTo(startX + xWidth, startY);
             context.stroke();
-            context.fillText(`y = ${yHeight}cm`, 5, startY/2);
-            context.fillText(`x = ${xWidth}cm`, (startX + xWidth)/2, startY + 15);
+            context.fillText(`${yHeight}cm`, 5, startY/2);
+            context.fillText(`${xWidth}cm`, (startX + xWidth)/2, startY + 15);
             context.fillText(`200cm`, (startX + xWidth) - (startX + xWidth)/3.5, startY/2);
 
         }
