@@ -25,16 +25,15 @@ function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherIm
     canvas.width = xWidth + 100;
     canvas.height = yHeight + 40;
 
-    var canvasContainer = document.getElementById('visualization');
-    canvasContainer.width = xWidth + 120; //not using this because text can go inside diagram
-    canvasContainer.height = yHeight + 50;
-
-    //var myImage = document.getElementById('user-image');
-    //myImage.height = ownImageHeight
+    var myImage = document.getElementById('user-image');
+    myImage.height = ownImageHeight
     //myImage.style.left = '400px'
 
-    //var otherImage=document.getElementById('other-image');
-    //otherImage.height = otherImageHeight;
+    var otherImage=document.getElementById('other-image');
+    otherImage.height = otherImageHeight;
+
+    var canvasContainer = document.getElementById('visualization');
+    canvasContainer.width = xWidth + 120; 
 
     if (canvas.getContext){
         var context = canvas.getContext('2d');
@@ -45,7 +44,10 @@ function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherIm
         context.font = "13px Roboto"
         context.fillStyle = "#ff847c"
 
-        if (leftShorter == 1){            
+        if (leftShorter == 1){     
+            
+            canvasContainer.height = otherImageHeight; //the div surrounding the persons and triangle //feels like this is not updating
+
             context.beginPath(); // Reset the current path            
             context.moveTo(startX, startY); // Starting point          
             context.lineTo(startX + xWidth , startY - yHeight); // End point - hypotenuse (remember that positive y value goes downwards)            
@@ -62,6 +64,9 @@ function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherIm
 
 
         } else {
+
+            canvasContainer.height = ownImageHeight; //the div surrounding the persons and triangle
+
             startX = 50
             context.beginPath(); 
             context.moveTo(startX + xWidth, startY);

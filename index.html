@@ -22,9 +22,6 @@
                 overflow: auto;
             }
 
-            h1 {
-                
-            }
 
             h2 {
                 color: #ff847c; 
@@ -65,9 +62,28 @@
             }
 
             #visualization {
-                width: 50em;
-                margin: auto;
+                margin: 3em;
+                padding: 5em;
                 overflow: hidden;
+                position: relative;
+            }
+
+            #visualization-diagram {
+                position: absolute;
+                top: 0;
+            }
+
+            #visualization-left-person {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+            }
+
+            #visualization-right-person {
+                position: absolute;
+                bottom: 0;
+                right: 0;
             }
 
         </style>
@@ -96,28 +112,34 @@
             <div id="two-col-form">
                 <div id="left-col">
                     <label for="own-height">Your Height (cm):</label>
-                    <input type="number" id="own-height" name="own-height">
+                    <input type="number" id="own-height" name="own-height" value=0>
                 </div>
                 <div id="right-col">
                     <label for="other-height">Their Height (cm):</label>
-                    <input type="number" id="other-height" name="other-height">
+                    <input type="number" id="other-height" name="other-height" value=0>
                 </div>
             </div>
 
 
             <div id="visualization" width="" height="">
-                <canvas id="triangle" width="0" height="0">
-                    <!--Triangle drawing here-->
-                </canvas>
-                <!--style doesn't seem to do anything-->
-                <img id="user-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" style="left:80px;"/>
-                <img id="other-image" src="https://www.stickpng.com/assets/images/5a4bc9952da5ad73df7efe65.png" width="40" height="100" />
-                <br>
-                <div id="calculation">
-                    <!--Calculation here-->
-                </div>    
-                <br>
+                <div id="visualization-left-person">
+                    <embed id="user-image" src="app_person1.svg" width="40" height="0" alt="You"/>
+                </div>
+                <div id="visualization-diagram" width="" height="">
+                    <canvas id="triangle" width="0" height="0">
+                        <!--Triangle drawing here-->
+                    </canvas>
+                </div>
+                <div id="visualization-right-person">
+                    <embed id="other-image" src="app_person2.svg" width="40" height="0" alt="The other person"/>
+                </div>
+                <br>               
+                
             </div>
+            <br>
+            <div id="calculation">
+                <!--Calculation here-->
+            </div>   
         </div>
 
 
