@@ -39,18 +39,25 @@
                 font-size: medium;
             }
 
+            #calculation {
+                color: #ff847c;
+                text-align: center;
+            }
+
             #app-area {
                 border: 1px solid #e84a5f;
                 margin: 0em 10em 5em 10em;
                 padding: 3em;
+                overflow: hidden;
             }
 
             #two-col-form {
-                width: 80%;
+                width: 70%;
                 margin: auto;
                 overflow: hidden;
             }
 
+           
             #left-col {
                 float: left;
                 color: #ff847c;
@@ -62,13 +69,19 @@
             }
 
             #visualization {
-                margin: 3em;
-                padding: 5em;
-                overflow: hidden;
+                margin: 3em auto;
+                padding: 0em;
+                overflow: visible;
                 position: relative;
             }
 
             #visualization-diagram {
+                position: absolute;
+                top: 0;
+                margin: 0;
+            }
+
+            #triange {
                 position: absolute;
                 top: 0;
             }
@@ -77,13 +90,22 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+            }
 
+            #user-image{
+                position: absolute;
+                bottom: 0;
             }
 
             #visualization-right-person {
                 position: absolute;
                 bottom: 0;
                 right: 0;
+            }
+
+            #other-image{
+                position: absolute;
+                bottom: 0;
             }
 
         </style>
@@ -108,7 +130,7 @@
             <br>
         </div>
         
-        <div id="app-area">
+        <div id="app-area" height="">
             <div id="two-col-form">
                 <div id="left-col">
                     <label for="own-height">Your Height (cm):</label>
@@ -123,7 +145,7 @@
 
             <div id="visualization" width="" height="">
                 <div id="visualization-left-person">
-                    <embed id="user-image" src="app_person1.svg" width="40" height="0" alt="You"/>
+                    <embed id="user-image" src="app_person1.svg" width="50" height="0" alt="You"/>
                 </div>
                 <div id="visualization-diagram" width="" height="">
                     <canvas id="triangle" width="0" height="0">
@@ -131,7 +153,7 @@
                     </canvas>
                 </div>
                 <div id="visualization-right-person">
-                    <embed id="other-image" src="app_person2.svg" width="40" height="0" alt="The other person"/>
+                    <embed id="other-image" src="app_person2.svg" width="50" height="0" alt="The other person"/>
                 </div>
                 <br>               
                 
@@ -139,7 +161,8 @@
             <br>
             <div id="calculation">
                 <!--Calculation here-->
-            </div>   
+            </div>
+               
         </div>
 
 
