@@ -1,0 +1,100 @@
+body {
+    background-color: #2a363b;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #e84a5f;
+    color: #2a363b;
+    font-size: 16px;
+    overflow: auto;
+}
+
+
+h2 {
+    color: #ff847c; 
+    margin: 0em 10em 2em 10em;
+    text-align: center;
+}
+
+p {
+    color: #fecea8;
+    margin: 5em 10em 3em 10em;
+    text-align: left;
+}
+
+label {
+    font-size: medium;
+}
+
+#calculation {
+    color: #ff847c;
+    text-align: center;
+}
+
+#app-area {
+    border: 1px solid #e84a5f;
+    margin: 0em 10em 5em 10em;
+    padding: 3em;
+    overflow: hidden;
+}
+
+#two-col-form {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+#left-col {
+    float: left;
+    color: #ff847c;
+}
+
+#right-col {
+    float: right;
+    color: #ff847c;
+}
+
+#visualization {
+    margin: 3em auto;
+    padding: 0em;
+    overflow: visible;
+    position: relative;
+}
+
+#visualization-diagram {
+    position: absolute;
+    top: 0;
+    margin: 0;
+}
+
+#triange {
+    position: absolute;
+    top: 0;
+}
+
+#visualization-left-person {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#user-image{
+    position: absolute;
+    bottom: 0;
+}
+
+#visualization-right-person {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#other-image{
+    position: absolute;
+    bottom: 0;
+}

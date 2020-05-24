@@ -37,7 +37,7 @@ function hypotenuse(){
 
 function drawVisualization(xWidth, yHeight, leftShorter, ownImageHeight, otherImageHeight){
     var canvasDiv = document.getElementById('visualization-diagram');
-    canvasDiv.style.left = 70 + "px";
+    canvasDiv.style.left = 80 + "px";
     
     var canvas = document.getElementById('triangle'); 
     canvas.width = xWidth + 80;
