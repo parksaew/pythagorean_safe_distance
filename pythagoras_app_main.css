@@ -20,6 +20,15 @@ h2 {
     text-align: center;
 }
 
+a{
+    color: #e84a5f;
+    text-align: left;
+    padding: 5px;
+    position: relative;
+    vertical-align:middle;
+    font-size: 14px;
+}
+
 p {
     color: #fecea8;
     margin: 5em 10em 3em 10em;
@@ -28,6 +37,15 @@ p {
 
 label {
     font-size: medium;
+}
+
+#home{        
+    padding-left: 2em;
+    margin-top: 1em;
+}
+
+#sae-icon {
+    vertical-align:middle;
 }
 
 #calculation {
